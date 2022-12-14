@@ -40,7 +40,7 @@ function game() {
     let userScore = scores[1];
 
     if (computerScore == userScore) {
-        console.log('Nobody wins, try again!')
+        console.log("Nobody wins, it's a tie! Try again!")
     } else if (computerScore > userScore) {
         console.log('Computer wins the game!')
     } else {
