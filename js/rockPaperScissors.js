@@ -11,10 +11,10 @@ function playRound(playerSelection, computerSelection) {
     let userSect = playerSelection.toLowerCase();
 
     if (userSect == computerSelection) {
-        decision = "computer";
+        decision = "";
         console.log(`***Computer's answer: ${computerSelection}***`);
         console.log(`***Your answer: ${userSect}***`);
-        console.log(`It's a tie! You both win! `);
+        console.log(`It's a tie! No winners. `);
         return decision;
     } else if (userSect == 'rock' && computerSelection == 'paper') {
         decision = 'computer';
