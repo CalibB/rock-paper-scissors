@@ -1,3 +1,5 @@
+let decision;
+
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     const randomChoice = Math.floor(Math.random() * choices.length);
@@ -7,7 +9,6 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     let userSect = playerSelection.toLowerCase();
-    let decision;
 
     if (userSect == computerSelection) {
         decision = "It's a tie! You both win!";
@@ -38,20 +39,20 @@ function game() {
     let computerScore = 0;
     let userScore = 0;
 
-    for (let i = 0; i <= maxRounds; i++) {
+    for (let i = 0; i < maxRounds; i++) {
         let computerChoice = getComputerChoice();
         let userChoice = prompt("Rock, paper or scissors?", "");
-        let roundResult = playRound(userChoice, computerChoice);
+        playRound(userChoice, computerChoice);
+        let roundResult = decision;
 
-        if (roundResult == roundResult.includes('computer is the victor!')) {
+        if (roundResult.includes('computer is the victor!')) {
             computerScore = ++computerScore;
             console.log('Computer wins this round.')
-        } else if (roundResult == roundResult.includes('You win')) {
+        } else if (roundResult.includes('You win')) {
             userScore = ++userScore;
             console.log('You win this round');
         } else {
             console.log("It's a tie")
-            break;
         };
     };
 
