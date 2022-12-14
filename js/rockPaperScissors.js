@@ -82,14 +82,14 @@ function getScores() {
         playRound(userChoice, computerChoice);
         let roundResult = decision;
 
-        if (roundResult.includes('computer is the victor!')) {
+        if (roundResult == 'computer') {
             scoreResults[0] = ++scoreResults[0];
-            console.log('Computer wins this round.')
-        } else if (roundResult.includes('You win')) {
+            console.log(`Computer wins (round ${i})`)
+        } else if (roundResult == 'user') {
             scoreResults[1] = ++scoreResults[1];
-            console.log('You win this round');
+            console.log(`You win this (round ${i})`);
         } else {
-            console.log("It's a tie")
+            console.log(`It's a tie. (round ${i})`);
         };
     };
 
