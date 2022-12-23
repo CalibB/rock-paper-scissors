@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/rockPaperScissors.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script src="./js/rockPaperScissors.js"></script>
+    <header class="head">
+        <h1 class="header__title">
+            Rock, Paper, Scissors -- The Game!!
+        </h1>
+    </header>
+
+    <main class="main">
+        <div class="greeting">
+            <h2 class="greeting__text">
+                Welcome human!!
+            </h2>
+            <p class="greeting__subtext">
+                Can you defeat your computer at this mighty game?
+            </p>
+            <button class="greeting-yes__btn">
+                YES! :)
+            </button>
+            <button class="greeting-no__btn">
+                NO! :(
+            </button>
+        </div>
+        <div class="main__selection">
+            <div class="score__display">
+                <p class="computer__score"></p>
+                <p class="your__score"></p>
+            </div>
+            <button class="rock__btn">
+                Rock
+            </button>
+            <button class="paper__btn">
+                Paper
+            </button>
+            <button class="scissors__btn">
+                Scissors
+            </button>
+        </div>
+        <div class="endgame">
+            <h3 class="endgame__text"></h3>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Created by CalibB</p>
+    </footer>
 </body>
 </html>
