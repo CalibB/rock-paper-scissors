@@ -72,26 +72,48 @@ function game() {
     };
 };
 
-function getScores() {
-    let maxRounds = 5;
-    let scoreResults = [0, 0];
+// function getScores() {
+//     let maxRounds = 5;
+//     let scoreResults = [0, 0];
 
-    for (let i = 0; i < maxRounds; i++) {
-        let computerChoice = getComputerChoice();
-        let userChoice = prompt("Rock, paper or scissors?", "");
-        playRound(userChoice, computerChoice);
-        let roundResult = decision;
+//     for (let i = 0; i < maxRounds; i++) {
+//         let computerChoice = getComputerChoice();
+//         let userChoice = prompt("Rock, paper or scissors?", "");
+//         playRound(userChoice, computerChoice);
+//         let roundResult = decision;
 
-        if (roundResult == 'computer') {
-            scoreResults[0] = ++scoreResults[0];
-            console.log(`Computer wins (round ${i})`)
-        } else if (roundResult == 'user') {
-            scoreResults[1] = ++scoreResults[1];
-            console.log(`You win this (round ${i})`);
-        } else {
-            console.log(`It's a tie. (round ${i})`);
-        };
-    };
+//         if (roundResult == 'computer') {
+//             scoreResults[0] = ++scoreResults[0];
+//             console.log(`Computer wins (round ${i})`)
+//         } else if (roundResult == 'user') {
+//             scoreResults[1] = ++scoreResults[1];
+//             console.log(`You win this (round ${i})`);
+//         } else {
+//             console.log(`It's a tie. (round ${i})`);
+//         };
+//     };
 
-    return scoreResults;
-}
+//     return scoreResults;
+// }
+
+const greeting = document.querySelector('.greeting');
+const greetingBtn = document.querySelector('.greeting-yes__btn');
+const greetingBtn2 = document.querySelector('.greeting-no__btn');
+const gameDiv = document.querySelector('.main__selection')
+
+greetingBtn.addEventListener('click', () => {
+    greeting.style.display = "none";
+    gameDiv.style.display = "block";
+});
+
+greetingBtn2.addEventListener('click', () => alert("Get outta here then!"));
+
+const rockBtn = document.querySelector(".rock__btn");
+const paperBtn = document.querySelector(".paper__btn");
+const scissorsBtn = document.querySelector(".scissors__btn");
+
+let userChoice = '';
+
+rockBtn.addEventListener('click', () => userChoice = "rock")
+paperBtn.addEventListener('click', () => userChoice = "paper");
+scissorsBtn.addEventListener('click', () => userChoice = "scissors");
