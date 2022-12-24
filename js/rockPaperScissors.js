@@ -12,49 +12,49 @@ function playRound(playerSelection, computerSelection) {
 
     if (userSect == computerSelection) {
         decision = "";
-        console.log(`***Computer's answer: ${computerSelection}***`);
-        console.log(`***Your answer: ${userSect}***`);
-        console.log(`It's a tie! No winners. `);
+        alert(`***Computer's answer: ${computerSelection}***`);
+        alert(`***Your answer: ${userSect}***`);
+        alert(`It's a tie! No winners. `);
         return decision;
     } else if (userSect == 'rock' && computerSelection == 'paper') {
         decision = 'computer';
-        console.log(`***Computer's answer: ${computerSelection}***`);
-        console.log(`***Your answer: ${userSect}***`);
-        console.log('Paper swallows rock! You lose, computer is the victor!');
+        alert(`***Computer's answer: ${computerSelection}***`);
+        alert(`***Your answer: ${userSect}***`);
+        alert('Paper swallows rock! You lose, computer is the victor!');
         return decision;
     } else if (userSect == 'rock' && computerSelection == 'scissors') {
         decision = 'user';
-        console.log(`***Computer's answer: ${computerSelection}***`);
-        console.log(`***Your answer: ${userSect}***`);
-        console.log('Rock beats scissors! You win, computer is the loser!');
+        alert(`***Computer's answer: ${computerSelection}***`);
+        alert(`***Your answer: ${userSect}***`);
+        alert('Rock beats scissors! You win, computer is the loser!');
         return decision;
     } else if (userSect == 'paper' && computerSelection == 'rock') {
         decision = 'user';
-        console.log(`***Computer's answer: ${computerSelection}***`);
-        console.log(`***Your answer: ${userSect}***`);
-        console.log('Paper swallows rock! You win, computer is the loser!');
+        alert(`***Computer's answer: ${computerSelection}***`);
+        alert(`***Your answer: ${userSect}***`);
+        alert('Paper swallows rock! You win, computer is the loser!');
         return decision;
     } else if (userSect == 'paper' && computerSelection == 'scissors') {
         decision = 'computer';
-        console.log(`***Computer's answer: ${computerSelection}***`);
-        console.log(`***Your answer: ${userSect}***`);
-        console.log('Scissors cut paper! You lose, computer is the victor!');
+        alert(`***Computer's answer: ${computerSelection}***`);
+        alert(`***Your answer: ${userSect}***`);
+        alert('Scissors cut paper! You lose, computer is the victor!');
         return decision;
     } else if (userSect == 'scissors' && computerSelection == 'rock') {
         decision = 'computer';
-        console.log(`***Computer's answer: ${computerSelection}***`);
-        console.log(`***Your answer: ${userSect}***`);
-        console.log('Rock smashes scissors! You lose, computer is the victor!');
+        alert(`***Computer's answer: ${computerSelection}***`);
+        alert(`***Your answer: ${userSect}***`);
+        alert('Rock smashes scissors! You lose, computer is the victor!');
         return decision;
     } else if (userSect == 'scissors' && computerSelection == 'paper') {
         decision = 'user';
-        console.log(`***Computer's answer: ${computerSelection}***`);
-        console.log(`***Your answer: ${userSect}***`);
-        console.log('Scissors cuts paper! You win, computer is the loser!');
+        alert(`***Computer's answer: ${computerSelection}***`);
+        alert(`***Your answer: ${userSect}***`);
+        alert('Scissors cuts paper! You win, computer is the loser!');
         return decision;
     } else {
         decision = null;
-        console.log('Oops!! It seems you entered an incorrect value! Please try again.');
+        alert('Oops!! It seems you entered an incorrect value! Please try again.');
     };
 };
 
@@ -72,29 +72,28 @@ function game() {
     };
 };
 
-// function getScores() {
-//     let maxRounds = 5;
-//     let scoreResults = [0, 0];
+function getScores() {
+    let maxRounds = 5;
+    let scoreResults = [0, 0];
 
-//     for (let i = 0; i < maxRounds; i++) {
-//         let computerChoice = getComputerChoice();
-//         let userChoice = prompt("Rock, paper or scissors?", "");
-//         playRound(userChoice, computerChoice);
-//         let roundResult = decision;
+    for (let i = 0; i < maxRounds; i++) {
+        let computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice);
+        let roundResult = decision;
 
-//         if (roundResult == 'computer') {
-//             scoreResults[0] = ++scoreResults[0];
-//             console.log(`Computer wins (round ${i})`)
-//         } else if (roundResult == 'user') {
-//             scoreResults[1] = ++scoreResults[1];
-//             console.log(`You win this (round ${i})`);
-//         } else {
-//             console.log(`It's a tie. (round ${i})`);
-//         };
-//     };
+        if (roundResult == 'computer') {
+            scoreResults[0] = ++scoreResults[0];
+            console.log(`Computer wins (round ${i})`)
+        } else if (roundResult == 'user') {
+            scoreResults[1] = ++scoreResults[1];
+            console.log(`You win this (round ${i})`);
+        } else {
+            console.log(`It's a tie. (round ${i})`);
+        };
+    };
 
-//     return scoreResults;
-// }
+    return scoreResults;
+}
 
 const greeting = document.querySelector('.greeting');
 const greetingBtn = document.querySelector('.greeting-yes__btn');
@@ -112,8 +111,8 @@ const rockBtn = document.querySelector(".rock__btn");
 const paperBtn = document.querySelector(".paper__btn");
 const scissorsBtn = document.querySelector(".scissors__btn");
 
-let userChoice = '';
+let humanChoice = '';
 
-rockBtn.addEventListener('click', () => userChoice = "rock")
-paperBtn.addEventListener('click', () => userChoice = "paper");
-scissorsBtn.addEventListener('click', () => userChoice = "scissors");
+rockBtn.addEventListener('click', () => humanChoice = "rock")
+paperBtn.addEventListener('click', () => humanChoice = "paper");
+scissorsBtn.addEventListener('click', () => humanChoice = "scissors");
