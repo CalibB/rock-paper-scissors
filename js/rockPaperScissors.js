@@ -13,45 +13,45 @@ function playRound(playerSelection, computerSelection) {
 
     if (userSect == computerSelection) {
         decision = "";
-        alert(`***Computer's answer: ${computerSelection}***`);
-        alert(`***Your answer: ${userSect}***`);
-        alert(`It's a tie! No winners. `);
+        computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
+        humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
+        roundResultPara.textContent = "It's a tie! No winners.";
         return decision;
     } else if (userSect == 'rock' && computerSelection == 'paper') {
         decision = 'computer';
-        alert(`***Computer's answer: ${computerSelection}***`);
-        alert(`***Your answer: ${userSect}***`);
-        alert('Paper swallows rock! You lose, computer is the victor!');
+        computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
+        humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
+        roundResultPara.textContent = 'Paper swallows rock! You lose, computer is the victor!';
         return decision;
     } else if (userSect == 'rock' && computerSelection == 'scissors') {
         decision = 'user';
-        alert(`***Computer's answer: ${computerSelection}***`);
-        alert(`***Your answer: ${userSect}***`);
-        alert('Rock beats scissors! You win, computer is the loser!');
+        computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
+        humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
+        roundResultPara.textContent = 'Rock beats scissors! You win, computer is the loser!';
         return decision;
     } else if (userSect == 'paper' && computerSelection == 'rock') {
         decision = 'user';
-        alert(`***Computer's answer: ${computerSelection}***`);
-        alert(`***Your answer: ${userSect}***`);
-        alert('Paper swallows rock! You win, computer is the loser!');
+        computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
+        humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
+        roundResultPara.textContent = 'Paper swallows rock! You win, computer is the loser!';
         return decision;
     } else if (userSect == 'paper' && computerSelection == 'scissors') {
         decision = 'computer';
-        alert(`***Computer's answer: ${computerSelection}***`);
-        alert(`***Your answer: ${userSect}***`);
-        alert('Scissors cut paper! You lose, computer is the victor!');
+        computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
+        humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
+        roundResultPara.textContent = 'Scissors cut paper! You lose, computer is the victor!';
         return decision;
     } else if (userSect == 'scissors' && computerSelection == 'rock') {
         decision = 'computer';
-        alert(`***Computer's answer: ${computerSelection}***`);
-        alert(`***Your answer: ${userSect}***`);
-        alert('Rock smashes scissors! You lose, computer is the victor!');
+        computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
+        humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
+        roundResultPara.textContent = 'Rock smashes scissors! You lose, computer is the victor!';
         return decision;
     } else if (userSect == 'scissors' && computerSelection == 'paper') {
         decision = 'user';
-        alert(`***Computer's answer: ${computerSelection}***`);
-        alert(`***Your answer: ${userSect}***`);
-        alert('Scissors cuts paper! You win, computer is the loser!');
+        computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
+        humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
+        roundResultPara.textContent = 'Scissors cuts paper! You win, computer is the loser!';
         return decision;
     } else {
         decision = null;
@@ -96,6 +96,9 @@ const gameBeginBtn = document.querySelector('.game-begin__btn');
 const roundPara = document.querySelector('.current__round');
 const endGameDiv = document.querySelector('.endgame');
 const endGameText = document.querySelector('.endgame__text');
+const roundResultPara = document.querySelector('.round__result');
+const computerSelectionPara = document.querySelector('.computer__selection');
+const humanSelectionPara = document.querySelector('.your__selection');
 
 greetingBtn.addEventListener('click', () => {
     greeting.style.display = "none";
