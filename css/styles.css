@@ -16,3 +16,7 @@ html {
 .game-info {
     display: none;
 }
+
+.endgame {
+    display: none;
+}
