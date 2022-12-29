@@ -75,13 +75,11 @@ function game() {
         endGameDiv.style.display = "block";
         endGameText.textContent = "Computer has won the game!"
         round = 0;
-        window.location.reload();
     } else if (humanScore === 5) {
         gameDiv.style.display = 'none';
         endGameDiv.style.display = "block";
         endGameText.textContent = "You have won the game!"
         round = 0;
-        window.location.reload();
     };
 }
 
@@ -116,6 +114,7 @@ const paperBtn = document.querySelector(".paper__btn");
 const scissorsBtn = document.querySelector(".scissors__btn");
 const computerScorePara = document.querySelector(".computer__score");
 const humanScorePara = document.querySelector(".your__score");
+const endGameBtn = document.querySelector(".endgame__reset-btn");
 let computerScore = 0;
 let humanScore = 0;
 
@@ -150,4 +149,8 @@ scissorsBtn.addEventListener('click', () => {
     roundIncrement();
     roundPara.textContent = `Current round: ${round}.`;
     game();
+});
+
+endGameBtn.addEventListener('click', () => {
+    location.reload();
 });
