@@ -1,4 +1,5 @@
 let decision;
+let round = 0;
 
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
@@ -76,12 +77,17 @@ function game() {
     };
 }
 
+function roundIncrement() {
+    return ++round;
+}
+
 const greeting = document.querySelector('.greeting');
 const greetingBtn = document.querySelector('.greeting-yes__btn');
 const greetingBtn2 = document.querySelector('.greeting-no__btn');
 const gameDiv = document.querySelector('.main__selection');
 const gameInfoDiv = document.querySelector('.game-info');
 const gameBeginBtn = document.querySelector('.game-begin__btn');
+const roundPara = document.querySelector('.current__round');
 
 greetingBtn.addEventListener('click', () => {
     greeting.style.display = "none";
@@ -93,7 +99,7 @@ greetingBtn2.addEventListener('click', () => alert("Get outta here then!"));
 gameBeginBtn.addEventListener('click', () => {
     gameInfoDiv.style.display = "none";
     gameDiv.style.display = "block";
-})
+});
 
 const rockBtn = document.querySelector(".rock__btn");
 const paperBtn = document.querySelector(".paper__btn");
@@ -110,6 +116,8 @@ rockBtn.addEventListener('click', () => {
     getScores(); 
     computerScorePara.textContent = `Computer score: ${computerScore}`;
     humanScorePara.textContent = `Your score: ${humanScore}`;
+    roundIncrement();
+    roundPara.textContent = `Current round: ${round}.`;
     game();
 })
 paperBtn.addEventListener('click', () => {
@@ -118,6 +126,8 @@ paperBtn.addEventListener('click', () => {
     getScores();
     computerScorePara.textContent = `Computer score: ${computerScore}`;
     humanScorePara.textContent = `Your score: ${humanScore}`;
+    roundIncrement();
+    roundPara.textContent = `Current round: ${round}.`;
     game();
     
 });
@@ -127,5 +137,7 @@ scissorsBtn.addEventListener('click', () => {
     getScores();
     computerScorePara.textContent = `Computer score: ${computerScore}`;
     humanScorePara.textContent = `Your score: ${humanScore}`;
+    roundIncrement();
+    roundPara.textContent = `Current round: ${round}.`;
     game();
 });
