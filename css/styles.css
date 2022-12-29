@@ -12,3 +12,7 @@ html {
 .main__selection {
     display: none;
 }
+
+.game-info {
+    display: none;
+}
