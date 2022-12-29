@@ -81,14 +81,19 @@ const greetingBtn = document.querySelector('.greeting-yes__btn');
 const greetingBtn2 = document.querySelector('.greeting-no__btn');
 const gameDiv = document.querySelector('.main__selection');
 const gameInfoDiv = document.querySelector('.game-info');
+const gameBeginBtn = document.querySelector('.game-begin__btn');
 
 greetingBtn.addEventListener('click', () => {
     greeting.style.display = "none";
-    gameInfoDiv.style.display = "block"
-    alert("Please click the button of your choice!")
+    gameInfoDiv.style.display = "block";
 });
 
 greetingBtn2.addEventListener('click', () => alert("Get outta here then!"));
+
+gameBeginBtn.addEventListener('click', () => {
+    gameInfoDiv.style.display = "none";
+    gameDiv.style.display = "block";
+})
 
 const rockBtn = document.querySelector(".rock__btn");
 const paperBtn = document.querySelector(".paper__btn");
