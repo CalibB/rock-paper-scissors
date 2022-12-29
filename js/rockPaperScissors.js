@@ -71,9 +71,17 @@ function getScores() {
 function game() {
 
     if (computerScore === 5) {
-        alert("Computer has won the game!")
+        gameDiv.style.display = 'none';
+        endGameDiv.style.display = "block";
+        endGameText.textContent = "Computer has won the game!"
+        round = 0;
+        window.location.reload();
     } else if (humanScore === 5) {
-        alert("You have won the game!")
+        gameDiv.style.display = 'none';
+        endGameDiv.style.display = "block";
+        endGameText.textContent = "You have won the game!"
+        round = 0;
+        window.location.reload();
     };
 }
 
@@ -88,6 +96,8 @@ const gameDiv = document.querySelector('.main__selection');
 const gameInfoDiv = document.querySelector('.game-info');
 const gameBeginBtn = document.querySelector('.game-begin__btn');
 const roundPara = document.querySelector('.current__round');
+const endGameDiv = document.querySelector('.endgame');
+const endGameText = document.querySelector('.endgame__text');
 
 greetingBtn.addEventListener('click', () => {
     greeting.style.display = "none";
