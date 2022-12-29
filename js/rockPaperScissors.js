@@ -79,11 +79,12 @@ function game() {
 const greeting = document.querySelector('.greeting');
 const greetingBtn = document.querySelector('.greeting-yes__btn');
 const greetingBtn2 = document.querySelector('.greeting-no__btn');
-const gameDiv = document.querySelector('.main__selection')
+const gameDiv = document.querySelector('.main__selection');
+const gameInfoDiv = document.querySelector('.game-info');
 
 greetingBtn.addEventListener('click', () => {
     greeting.style.display = "none";
-    gameDiv.style.display = "block";
+    gameInfoDiv.style.display = "block"
     alert("Please click the button of your choice!")
 });
 
