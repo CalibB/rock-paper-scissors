@@ -62,7 +62,8 @@ button {
 
 .greeting,
 .game-info,
-.main__selection {
+.main__selection,
+.endgame {
     margin-top: 3rem;
 }
 
@@ -73,7 +74,8 @@ button {
 
 .greeting__subtext,
 .info__para,
-.display__inner {
+.display__inner,
+.endgame__text {
     color: #FFBF00;
 }
 
@@ -81,7 +83,8 @@ button {
 .greeting__subtext,
 .info__heading,
 .info__para,
-.display__inner {
+.display__inner,
+.endgame__text {
     margin-bottom: 1rem;
 }
 
