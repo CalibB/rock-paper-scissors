@@ -61,7 +61,8 @@ button {
 }
 
 .greeting,
-.game-info {
+.game-info,
+.main__selection {
     margin-top: 3rem;
 }
 
@@ -71,14 +72,16 @@ button {
 }
 
 .greeting__subtext,
-.info__para {
+.info__para,
+.display__inner {
     color: #FFBF00;
 }
 
 .greeting__text,
 .greeting__subtext,
 .info__heading,
-.info__para {
+.info__para,
+.display__inner {
     margin-bottom: 1rem;
 }
 
@@ -88,4 +91,14 @@ button {
 
 .info__heading {
     font-size: 1.5rem;
+}
+
+.display__inner {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.round__result {
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
