@@ -16,42 +16,49 @@ function playRound(playerSelection, computerSelection) {
         computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
         humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
         roundResultPara.textContent = "It's a tie! No winners.";
+        roundResultPara.style.backgroundColor = "grey";
         return decision;
     } else if (userSect == 'rock' && computerSelection == 'paper') {
         decision = 'computer';
         computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
         humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
         roundResultPara.textContent = 'Paper swallows rock! You lose, computer is the victor!';
+        roundResultPara.style.backgroundColor = "red";
         return decision;
     } else if (userSect == 'rock' && computerSelection == 'scissors') {
         decision = 'user';
         computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
         humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
         roundResultPara.textContent = 'Rock beats scissors! You win, computer is the loser!';
+        roundResultPara.style.backgroundColor = "green";
         return decision;
     } else if (userSect == 'paper' && computerSelection == 'rock') {
         decision = 'user';
         computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
         humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
         roundResultPara.textContent = 'Paper swallows rock! You win, computer is the loser!';
+        roundResultPara.style.backgroundColor = "green";
         return decision;
     } else if (userSect == 'paper' && computerSelection == 'scissors') {
         decision = 'computer';
         computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
         humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
         roundResultPara.textContent = 'Scissors cut paper! You lose, computer is the victor!';
+        roundResultPara.style.backgroundColor = "red";
         return decision;
     } else if (userSect == 'scissors' && computerSelection == 'rock') {
         decision = 'computer';
         computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
         humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
         roundResultPara.textContent = 'Rock smashes scissors! You lose, computer is the victor!';
+        roundResultPara.style.backgroundColor = "red";
         return decision;
     } else if (userSect == 'scissors' && computerSelection == 'paper') {
         decision = 'user';
         computerSelectionPara.textContent = `***Computer's answer: ${computerSelection}***`;
         humanSelectionPara.textContent = `***Your answer: ${userSect}***`;
         roundResultPara.textContent = 'Scissors cuts paper! You win, computer is the loser!';
+        roundResultPara.style.backgroundColor = "green";
         return decision;
     } else {
         decision = null;
