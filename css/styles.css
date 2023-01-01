@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;800&display=swap');
+
+/* Reset */
+
 html {
     box-sizing: border-box;
+    font-family: 'Unbounded', sans-serif;
 }
 
 *,
@@ -9,14 +14,69 @@ html {
     padding: 0;
 }
 
-.main__selection {
-    display: none;
-}
+/* Homepage State */
 
-.game-info {
-    display: none;
-}
-
+.main__selection,
+.game-info,
 .endgame {
     display: none;
+}
+
+/* global Styling */
+
+body {
+    min-height: 100vh;
+    background-color: #540375;
+}
+
+button {
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color: #FFBF00;
+    color: #540375;
+    font-weight: 800;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #FF7000;
+}
+
+/* Hover utility classes */
+
+.hover_btn:hover {
+    background-color: #10A19D;
+}
+
+/* Header Styling */
+
+.head {
+    text-align: center;
+    padding: 2rem;
+    color: #10A19D;
+}
+
+/* Main Content */
+
+.main {
+    text-align: center;
+}
+
+.greeting {
+    margin-top: 3rem;
+}
+
+.greeting__text {
+    color: #FF7000;
+}
+
+.greeting__subtext {
+    color: #FFBF00;
+}
+
+.greeting__text,
+.greeting__subtext {
+    margin-bottom: 1rem;
+}
+
+.greeting-yes__btn {
+    margin-right: 1rem;
 }
