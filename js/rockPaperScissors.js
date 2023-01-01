@@ -80,12 +80,14 @@ function game() {
     if (computerScore === 5) {
         gameDiv.style.display = 'none';
         endGameDiv.style.display = "block";
-        endGameText.textContent = "Computer has won the game!"
+        endGameText.textContent = "Computer has won the game!";
+        endGameText.style.color = "red";
         round = 0;
     } else if (humanScore === 5) {
         gameDiv.style.display = 'none';
         endGameDiv.style.display = "block";
-        endGameText.textContent = "You have won the game!"
+        endGameText.textContent = "You have won the game!";
+        endGameText.style.color = "green";
         round = 0;
     };
 }
