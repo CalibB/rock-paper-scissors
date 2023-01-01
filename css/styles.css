@@ -27,6 +27,7 @@ html {
 body {
     min-height: 100vh;
     background-color: #540375;
+    position: relative;
 }
 
 button {
@@ -104,4 +105,13 @@ button {
 .round__result {
     width: 100%;
     margin-bottom: 1.5rem;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #10A19D;
 }
